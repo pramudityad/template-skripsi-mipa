@@ -1,0 +1,61 @@
+Klien membuat permintaan ke server otorisasi dengan mengirimkan ID klien, rahasia klien, bersama dengan audiens dan klaim-klaim lainnya. Server otorisasi memvalidasi permintaan tersebut, dan, jika berhasil, mengirimkan respons dengan token akses. Klien sekarang dapat menggunakan token akses untuk meminta sumber daya yang dilindungi dari server sumber daya.
+Karena klien harus selalu menjaga rahasia klien, pemberian ini hanya dimaksudkan untuk digunakan pada klien terpercaya. Dengan kata lain, klien yang menyimpan rahasia klien harus selalu digunakan di tempat di mana tidak ada risiko rahasia tersebut disalahgunakan. Sebagai contoh, meskipun mungkin ide yang baik untuk menggunakan hibah kredensial klien di sistem internal yang mengirimkan laporan di seluruh web ke bagian lain dari sistem Anda, namun tidak dapat digunakan untuk alat publik yang dapat diakses oleh pengguna eksternal mana pun.
+Berikut ini adalah permintaan HTTP yang relevan pada Tabel \ref{tab:req_http} berikut:
+
+\begin{table}[H]
+    \caption{Permintaan HTTP}
+    \vspace{0.5em}
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Permintaan & Deskripsi \\
+        \hline \hline
+        POST & Metode HTTP \\
+        \hline
+        /token & Endpoint \\
+        \hline
+        grant\_type=client\_credentials & Jenis hibah \\
+        \hline
+        & ID klien \\
+        \hline
+        & Rahasia klien \\
+        \hline
+        & Audiens \\
+        \hline
+    \end{tabular}
+    \label{tab:req_http}
+\end{table}
+
+Sedangkan berikut contoh respon HTTP yang relevan pada Tabel \ref{tab:res_http} berikut:
+
+\begin{table}[h]
+    \caption{Respon HTTP}
+    \vspace{0.5em}
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Respon & Deskripsi \\
+        \hline \hline
+        200 OK & Kode status HTTP \\
+        \hline
+        Content-Type: application/json & Header HTTP \\
+        \hline
+        Cache-Control: no-store & Header HTTP \\
+        \hline
+        Pragma: no-cache & Header HTTP \\
+        \hline
+        \{ & Body \\
+        \hline
+        "access\_token": "2YotnFZFE & \\
+        \hline
+        "token\_type": "example", & \\
+        \hline
+        "expires\_in": 3600, & \\
+        \hline
+        "example\_parameter": "example\_value" & \\
+        \hline
+        \} & \\
+        \hline
+    \end{tabular}
+    \label{tab:res_http}
+\end{table}
