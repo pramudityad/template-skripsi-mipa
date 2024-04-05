@@ -1,0 +1,34 @@
+Metode CART merupakan suatu metode pohon keputusan (decision tree) yang bersifat recursive partitioning. Satu tree terdiri atas tiga komponen utama yaitu root node, internal node dan terminal node. Pada metode CART simpul akar (root node) dipartisi menjadi dua simpul anak (internal node), masing-masing simpul anak kemudian dipartisi menjadi dua simpul anak yang baru hingga menjadi terminal node yang bersifat homogen sebagai interpretasi dari tree Zhang, H \& Singer (2010). CART membentuk tree dengan dua langkah yaitu, pembentukan maksimal dari decision tree berdasarkan proses splitting (pemilahan) dan pemangkasan (pruning) dengan mempertimbangkan tree dan cabang pohon yang terbentuk. Proses splitting variabel pada percabangan node pada tree dilihat dari variabel yang memiliki nilai goodness of split maksimal. Nilai ini dilihat berdasarkan perubahan gini impurity/gini index pada node t dan percabangan nodenya menurut Gordon dkk. (1984) dengan rumus sebagai berikut.
+%insert equation
+\\
+Node Kiri:
+\begin{equation}
+    \text{imp}(\mathbf{t}_{\text{L}}) = \sum_{l=1}^{2} p_{\text{tL}}(l)(1 - p_{\text{tL}}(l))
+\end{equation}
+\\
+Node Kanan:
+\begin{equation}
+    \text{imp}(\mathbf{t}_{\text{R}}) = \sum_{l=1}^{2} p_{\text{tR}}(l)(1 - p_{\text{tR}}(l))
+    \end{equation}
+\\ 
+Node t:
+\begin{equation}
+    \text{imp}(\mathbf{t}) = \sum_{k=1}^{2} p_{\text{t}}(k)(1 - p_{\text{t}}(k))
+    \end{equation}
+\\
+Keterangan:
+\begin{equation}
+    p_{t}(k) = \frac{n_{t}(k)}{n_{t}} \quad \text{dan} \quad p_{t}(l) = \frac{n_{t}(l)}{n_{t}}
+    \end{equation}
+\\
+\begin{equation}
+    p_{t}(k), p_{t}(l) : \text{Proporsi objek kelas klasifikasi ke-} k \text{ atau ke-} l \text{ pada node } t
+    \end{equation}
+    
+    \begin{equation}
+    n_{t}(k), n_{t}(l) : \text{Jumlah observasi kelas klasifikasi ke-} k \text{ atau ke-} l \text{ pada node } t
+    \end{equation}
+    
+    \begin{equation}
+    n_{t} : \text{Jumlah seluruh observasi pada node } t
+    \end{equation}

@@ -1,0 +1,9 @@
+OOB sampel berfungsi sebagai percobaan prediksi tree yang terbentuk dikarenakan setiap tree memiliki sampel bootstrap yang berbeda, sehingga setiap amatan dapat menjadi sampel OOB dan perlu diprediksi menggunakan beberapa tree yang dibangun tidak menggunakan sampel tersebut. Estimasi error pada hasil prediksi RF dapat diduga dengan menggunakan laju galat OOB (OOB error rate) yang dihitung dari hasil proporsi kesalahan prediksi klasifikasi setiap amatan dari hasil RF Janitza \& Hornung (2018). Penggunaan mtry untuk melihat hasil dari OOB error diharapkan tidak terlalu rendah, dikarenakan apabila terlalu rendah, maka hasil OOB error akan semakin tinggi yang menghasilkan RF memiliki kinerja yang buruk. OOB error rate diharapkan memiliki nilai terkecil (minimum). Berikut perhitungan laju galat OOB dalam klasifikasi.
+
+\begin{equation}
+    \text{Laju Galat } \text{OOB}_i = \frac{1}{n} \sum_{i=1}^{n} \mathbb{I}(Y_i \neq P_i)
+    \end{equation}
+
+OOB error rate digunakan untuk memprediksi observasi ke- $i$ dari $Xi$ dimana
+prediksi hanya berlaku untuk suatu tree yang sampel bootstrapnya tidak mengandung ($Xi$, $Yi$)
+    
