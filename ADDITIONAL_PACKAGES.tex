@@ -36,6 +36,7 @@
 
 % untuk input kode baik dari file atau bukan
 \usepackage{listings} 
+\usepackage{xcolor}
 
 % ----------------------------------------------------------------------------
 % Contoh dari file
@@ -71,6 +72,10 @@
 %-----------------------------------------------------------------
 % Setting syntax hightlighting
 %-----------------------------------------------------------------
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+
 \lstset{frame=tb,
   language=Python,
   aboveskip=2mm,
@@ -80,10 +85,10 @@
   basicstyle  = \fontfamily{pcr}\fontsize{8pt}{8pt}\selectfont,
   numbersep=8pt,
   numbers=left,
-  numberstyle=\tiny\color{gray},
-  keywordstyle=\color{blue},
-  commentstyle=\color{dkgreen},
-  stringstyle=\color{mauve},
+	numberstyle=\tiny\color{codegray},
+  keywordstyle=\color{magenta},
+  commentstyle=\color{codegreen},
+	stringstyle=\color{codepurple},
   breaklines=true,
   breakatwhitespace=true,
   tabsize=4

@@ -1,0 +1,19 @@
+Pada tahap ini dilakukan pembagian data fitur dan target. Berikut adalah contoh kode untuk melakukan pembagian data fitur dan target.
+\begin{lstlisting}
+    # Separate the features (X) and the target (y)
+    X = df_encoded.drop(columns=['is_login_success'])
+    y = df_encoded['is_login_success']
+    \end{lstlisting}
+
+    Kode di atas digunakan untuk memisahkan fitur dan target. Fitur disimpan pada variabel X, sedangkan target disimpan pada variabel y.
+
+\subsubsection{Pembagian Data Training dan Data Testing}
+Pada tahap ini dilakukan pembagian data training dan data testing. Berikut adalah contoh kode untuk melakukan pembagian data training dan data testing.
+\begin{lstlisting}
+    # Split the data into training and test sets
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3, random_state=42)
+\end{lstlisting}
+
+    Kode di atas digunakan untuk membagi data menjadi data training dan data testing. Data training disimpan pada variabel X\_train dan y\_train, sedangkan data testing disimpan pada variabel X\_test dan y\_test.
+    Set pelatihan digunakan untuk melatih model, dan set pengujian digunakan untuk mengevaluasi performa model pada data yang tidak terlihat. 
+    Fungsi train\_test\_split dari modul sklearn.model\_selection digunakan untuk melakukan ini. Parameter test\_size disetel ke 0,3, artinya 30\% data akan digunakan untuk set pengujian, dan sisanya 70\% akan digunakan untuk set pelatihan. Parameter random\_state disetel ke 42 untuk memastikan bahwa pemisahan yang dihasilkan dapat direproduksi.

@@ -1,0 +1,18 @@
+Berdasarkan tabel di atas, terlihat bahwa kolom 'ASN' memiliki tipe data numerik, sedangkan kolom lainnya memiliki tipe data string. Oleh karena itu, perlu dilakukan encoding terhadap kolom-kolom yang memiliki tipe data string. Berikut adalah contoh kode untuk melakukan encoding.
+
+\begin{lstlisting}
+    import category_encoders as ce
+
+    # One-hot encode the categorical features
+    # encode categorical variables with ordinal encoding
+    # see def preprocess_data(df) above
+    encoder = ce.OneHotEncoder(cols= ['login_timestamp', 'ip_address', 'country', 'region', 'city', 'user_agent_string', 'browser', 'os_detail'])
+    X_train = encoder.fit_transform(X_train)
+    
+    X_test = encoder.transform(X_test)
+    X_train.head()
+    \end{lstlisting}
+
+Berikut adalah hasil keluaran dari tahap ini.
+
+% to-do: add table here

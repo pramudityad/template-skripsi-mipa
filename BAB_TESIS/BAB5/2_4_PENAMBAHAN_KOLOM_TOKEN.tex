@@ -1,0 +1,26 @@
+Kolom token dibuat untuk menyimpan token yang digunakan untuk mengakses API. Kolom ini dibuat dengan cara mengenerate token secara acak menggunakan SHA512. Berikut adalah contoh kode untuk membuat kolom token.
+
+\begin{lstlisting}
+    # generate SHA512 Hash from user_id as m2m token
+    import hashlib
+
+    def generate_sha512_hash(user_id):
+        sha512_hash = hashlib.sha512()
+        sha512_hash.update(str(user_id).encode('utf-8'))
+        return sha512_hash.hexdigest()
+
+    features['token'] = features['user_id'].apply(generate_sha512_hash)
+    \end{lstlisting}
+
+Berikut adalah contoh token yang digenerate.
+
+\begin{table}[H]
+    \caption{Contoh Token}
+    \begin{tabular}{|l|l|}
+    \hline
+    \textbf{User ID} & \textbf{Token} \\ \hline
+    -3065936140549856249 & 4ffe29f1960c24624ec2c36909f3b39cb8d59fa18515f4 \\
+    5932501938287412564 & ecee6cc95d3b047c8f796b8e772a468124b7ddb599a7a3 \\ \hline
+    \end{tabular}
+    \label{tab:token}
+    \end{table}

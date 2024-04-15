@@ -1,0 +1,24 @@
+Pada tahap ini dilakukan visualisasi model. Berikut adalah contoh kode untuk melakukan visualisasi model.
+\begin{lstlisting}
+    # Visualize a single decision tree
+    plt.figure(figsize=(12,12))
+    tree = plot_tree(clf.estimators_[0], feature_names=X.columns, filled=True, rounded=True, fontsize=10)
+    \end{lstlisting}
+
+    Kode di atas digunakan untuk melakukan visualisasi model. Berikut adalah penjelasannya:
+    Tahap ini memvisualisasikan satu pohon keputusan dari model Random Forest. Ini memberikan gambaran tentang bagaimana model membuat prediksi. Berikut adalah penjelasannya:
+
+    \begin{enumerate}
+    \item \textbf{Menginisialisasi plot:} Baris 2 menginisialisasi plot dengan ukuran 12 x 12 inci. Ini memastikan bahwa plot cukup besar untuk ditampilkan dengan jelas.
+    \item \textbf{Membuat plot:} Baris 3 membuat plot menggunakan fungsi \texttt{plot\_tree} dari \texttt{sklearn.tree}. Ini mengambil tiga argumen: model (\texttt{clf.estimators\_[0]}), nama fitur (\texttt{X.columns}), dan beberapa parameter untuk mengontrol penampilan plot. Hasilnya adalah plot pohon keputusan.
+    \end{enumerate}
+
+    % \begin{figure}[H]
+    %     \centering
+    %     \includegraphics[width=0.8\textwidth]{img/decision_tree.png}
+    %     \caption{Decision Tree}
+    %     \label{fig:decision_tree}
+    %     \end{figure}
+
+        Gambar 5.1 menunjukkan plot pohon keputusan. Setiap node dalam pohon mewakili satu aturan yang digunakan untuk membuat prediksi. Pada node akar, model memeriksa apakah nilai fitur 'asn' lebih kecil dari 0,5. Jika iya, maka model akan memprediksi bahwa pengguna tidak berhasil login. Jika tidak, maka model akan memeriksa apakah nilai fitur 'asn' lebih kecil dari 1,5. Jika iya, maka model akan memprediksi bahwa pengguna berhasil login. Jika tidak, maka model akan memeriksa apakah nilai fitur 'asn' lebih kecil dari 2,5. Jika iya,
+  

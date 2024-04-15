@@ -1,0 +1,31 @@
+Penamaan kolom dilakukan untuk mempermudah pemanggilan kolom. Berikut adalah contoh kode untuk melakukan penamaan kolom.
+
+\begin{lstlisting}
+    # rename above columns to snake case
+    features = features.rename(columns={'Login Timestamp': 'login_timestamp', 'User ID': 'user_id', 'Round-Trip Time [ms]':'round_trip','Region':'region', 'City':'city', 'ASN':'asn', 'IP Address': 'ip_address', 'Country': 'country', 'User Agent String': 'user_agent_string','Device Type': 'device_type', 'Browser Name and Version': 'browser', 'Is Account Takeover':'is_account_takeover', 'OS Name and Version':'os_detail','Login Successful':'is_login_success','Is Attack IP':'is_attack_ip'})
+    \end{lstlisting}
+
+    \begin{table}[H]
+        \caption{Column Renaming in DataFrame}
+        \centering
+        \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Original Column Name} & \textbf{New Column Name} \\ \hline
+        Login Timestamp & login\_timestamp \\ 
+        User ID & user\_id \\ 
+        Round-Trip Time [ms] & round\_trip \\ 
+        Region & region \\ 
+        City & city \\ 
+        ASN & asn \\ 
+        IP Address & ip\_address \\ 
+        Country & country \\ 
+        User Agent String & user\_agent\_string \\ 
+        Device Type & device\_type \\ 
+        Browser Name and Version & browser \\ 
+        Is Account Takeover & is\_account\_takeover \\ 
+        OS Name and Version & os\_detail \\ 
+        Login Successful & is\_login\_success \\ 
+        Is Attack IP & is\_attack\_ip \\ \hline
+        \end{tabular}
+        \label{tab:column_renaming}
+        \end{table}

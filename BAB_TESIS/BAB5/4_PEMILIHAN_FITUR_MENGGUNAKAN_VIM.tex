@@ -1,0 +1,45 @@
+Pada bagian ini akan dijelaskan mengenai implementasi pemilihan fitur. Pemilih-
+an fitur dilakukan dengan cara memilih fitur yang memiliki korelasi tinggi dengan target.
+Berikut adalah tahapan pemilihan fitur.
+
+Sebelum itu dilakukan eksplorasi data untuk mengetahui jumlah baris dan kolom, tipe data, dan statistik deskriptif dari data. 
+Tahap ini diperlukan untuk mengetahui tipe data dari setiap kolom. 
+
+Asumsi yang digunakan adalah kolom yang memiliki tipe data numerik memiliki korelasi yang lebih tinggi dibandingkan dengan kolom yang memiliki tipe data string.
+Berikut adalah contoh kode untuk mengetahui tipe data dari setiap kolom.
+
+\begin{lstlisting}
+    categorical = [var for var in df.columns if df[var].dtype=='O']
+    print('There are {} categorical variables\n'.format(len(categorical)))
+    print('The categorical variables are :\n\n', categorical)
+
+    There are 8 categorical variables
+
+    The categorical variables are :
+    ['login_timestamp', 'ip_address', 'country', 'region', 'city', 'user_agent_string', 'browser', 'os_detail']
+    \end{lstlisting}
+
+    Berikut adalah hasil keluaran dari tahap ini.
+
+    \begin{table}[H]
+        \caption{Data Type of Each Column}
+        \centering
+        \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Column Name} & \textbf{Data Type} \\ \hline
+        login\_timestamp & object \\ 
+        ip\_address & object \\ 
+        country & object \\ 
+        region & object \\ 
+        city & object \\ 
+        asn & int64 \\ 
+        user\_agent\_string & object \\ 
+        browser & object \\ 
+        os\_detail & object \\ 
+        is\_login\_success & bool \\ \hline
+        \end{tabular}
+        \label{tab:data_type}
+        \end{table}
+
+        Berdasarkan tabel \ref{tab:data_type}, terlihat bahwa kolom 'ASN' memiliki tipe data numerik, sedangkan kolom lainnya memiliki tipe data string.
+

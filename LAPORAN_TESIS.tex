@@ -228,27 +228,43 @@
 	\label{rancangan analisis kebutuhan sistem}
 	\input{BAB_TESIS/BAB4/2_ANALISIS_KEBUTUHAN_SISTEM}
 
-	\section{Pembuatan Sistem}
-	\label{rancangan pembuatan sistem}
+		\subsection{Analisis Kebutuhan Fungsional}
+		\label{rancangan kebutuhan fungsional}
+		\input{BAB_TESIS/BAB4/2_1_KEBUTUHAN_FUNGSIONAL}
 
-		\subsection{Pembuatan Sistem Pengenalan Entitas Bernama}
-		\label{rancangan pembuatan sistem pengenalan entitas bernama}
-		\input{BAB_TESIS/BAB4/3_2_SISTEM_PENGENALAN_ENTITAS_BERNAMA}
+		\subsection{Analisis Kebutuhan Perangkat Keras}
+		\label{rancangan analisis kebutuhan perangkat keras}
+		\input{BAB_TESIS/BAB4/2_2_KEBUTUHAN_PERANGKAT_KERAS}
 
-		\subsection{Pembuatan Sistem Ekstraksi Kalimat Pernyataan}
-		\label{rancangan sistem ekstraksi kalimat pernyataan}
-		\input{BAB_TESIS/BAB4/3_3_SISTEM_EKSTRAKSI_KALIMAT_PERNYATAAN}
+		\subsection{Analisis Kebutuhan Perangkat Lunak}
+		\label{rancangan analisis kebutuhan perangkat lunak}
+		\input{BAB_TESIS/BAB4/2_3_KEBUTUHAN_PERANGKAT_LUNAK}
 
-	\section{Rancangan Antarmuka}
-	\label{rancangan antarmuka}
+	\section{Rancangan Sistem}
+	\label{rancangan sistem}
+	\input{BAB_TESIS/BAB4/3_RANCANGAN_SISTEM}
 
-		\subsection{Deskripsi}
-		\label{rancangan deskripsi antarmuka}
-		\input{BAB_TESIS/BAB4/4_1_DESKRIPSI_RANCANGAN_ANTARMUKA}
+		\subsection{Rancangan Arsitektur Sistem}
+		\label{rancangan Arsitektur Sistem}
+		\input{BAB_TESIS/BAB4/3_1_RANCANGAN_ARSITEK_SISTEM}
 
-		\subsection{\textit{Wireframe}}
-	    \label{rancangan wireframe antarmuka}
-	    \input{BAB_TESIS/BAB4/4_2_WIREFRAME_ANTARMUKA}
+		\subsection{Rancangan Pembersihan Data}
+		\label{rancangan pembersihan data}
+		\input{BAB_TESIS/BAB4/3_2_RANCANGAN_PEMBERSIHAN_DATA}
+		% masukkan rancangan split data 70-30
+
+		\subsection{Rancangan \textit{Variable Importance Measure}}
+		\label{rancangan variable importance measure}
+		\input{BAB_TESIS/BAB4/3_3_RANCANGAN_VIM}
+
+		\subsection{Rancangan Integrasi Sistem FHIR}
+		\label{rancangan integrasi sistem fhir}
+		\input{BAB_TESIS/BAB4/3_4_RANCANGAN_INTEGRASI_FHIR}
+
+	\section{Rancangan Pengujian}
+	\label{rancangan pengujian}
+	\input{BAB_TESIS/BAB4/4_RANCANGAN_PENGUJIAN}
+
 
 %-----------------------------------------------------------------
 % Akhir BAB 4
@@ -258,20 +274,111 @@
 %-----------------------------------------------------------------
 % Awal BAB 5
 %-----------------------------------------------------------------
+
 \chapter{IMPLEMENTASI SISTEM}
 \label{IMPLEMENTASI SISTEM}
+\input{BAB_TESIS/BAB5/0_IMPLEMENTASI_SISTEM}
 
-	\section{Spesifikasi}
-	\label{implementasi spesifikasi}
-	\input{BAB_TESIS/BAB5/1_SPESIFIKASI}
+	\section{Pengumpulan Data}
+	\label{implementasi pengumpulan data}
+	\input{BAB_TESIS/BAB5/1_PENGUMPULAN_DATA}
 
-	\section{Implementasi Sistem Pengenalan Entitas Bernama}
-	\label{implementasi sistem ner}
-	\input{BAB_TESIS/BAB5/2_1_IMPLEMENTASI_SISTEM_NER}
+	\section{\textit{Preprocessing Data}}
+	\label{implementasi preprocessing data}
+	\input{BAB_TESIS/BAB5/2_PREPROCESSING_DATA}
 
-	\section{Implementasi Sistem Ekstraksi Kalimat Pernyataan}
-	\label{implementasi sistem ekstraksi kalimat pernyataan}
-	\input{BAB_TESIS/BAB5/2_2_IMPLEMENTASI_SISTEM_EKTRAKSI_KALIMAT_PERNYATAAN}
+		\subsection{Eksplorasi Data}
+		\label{implementasi eksplorasi data}
+		\input{BAB_TESIS/BAB5/2_1_EKSPLORASI_DATA}
+
+		\subsection{Pengecekan \textit{Missing Value}}
+		\label{implementasi pengecekan missing value}
+		\input{BAB_TESIS/BAB5/2_2_PENGECEKAN_MISSING_VALUE}
+		
+		\subsection{Pemilihan Target}
+		\label{implementasi pemilihan target}
+		\input{BAB_TESIS/BAB5/2_3_PEMILIHAN_TARGET}
+
+		\subsection{Penambahan Kolom Token}
+		\label{implementasi penambahan kolom token}
+		\input{BAB_TESIS/BAB5/2_4_PENAMBAHAN_KOLOM_TOKEN}
+
+	\section{Pembersihan Data}
+	\label{implementasi pembersihan data}
+	\input{BAB_TESIS/BAB5/3_PEMBERSIHAN_DATA}
+
+		\subsection{Penamaan Kolom}
+		\label{implementasi penamaan kolom}
+		\input{BAB_TESIS/BAB5/3_1_PENAMAAN_KOLOM}
+
+		\subsection{Penyaringan Data}
+		\label{implementasi penyaringan data}
+		\input{BAB_TESIS/BAB5/3_2_PENYARINGAN_DATA}
+
+		\subsection{Penghapusan Kolom}
+		\label{implementasi penghapusan kolom}
+		\input{BAB_TESIS/BAB5/3_3_PENGHAPUSAN_KOLOM}
+
+	\section{Pemilihan Fitur Menggunakan \textit{Variable Importance Measure}}
+	\label{implementasi pemilihan fitur menggunakan variable importance measure}
+	\input{BAB_TESIS/BAB5/4_PEMILIHAN_FITUR_MENGGUNAKAN_VIM}
+
+			\subsection{\textit{Encoding Data}}
+			\label{implementasi encoding data}
+			\input{BAB_TESIS/BAB5/4_1_1_ENCODING_DATA}
+
+			\subsection{\textit{Gini Importance}}
+			\label{implementasi gini importance}
+			\input{BAB_TESIS/BAB5/4_1_2_GINI_IMPORTANCE}
+
+	\section{Implementasi \textit{Random Forest}}
+	\label{implementasi random forest}
+	\input{BAB_TESIS/BAB5/5_IMPLEMENTASI_RF}
+
+		\subsection{Pembagian Data}
+		\label{implementasi pembagian data}
+		\input{BAB_TESIS/BAB5/5_1_PEMBAGIAN_DATA}
+
+		\subsection{Pembuatan Model}
+		\label{implementasi pembuatan model}
+		\input{BAB_TESIS/BAB5/5_2_PEMBUATAN_MODEL}
+
+		\subsection{Visualisasi Model}
+		\label{implementasi visualisasi model}
+		\input{BAB_TESIS/BAB5/5_3_VISUALISASI_MODEL}
+
+		% \subsection{Pengujian Model}
+		% \label{implementasi pengujian model}
+		% \input{BAB_TESIS/BAB5/5_4_PENGUJIAN_MODEL}
+
+		\subsection{Evaluasi Model}
+		\label{implementasi evaluasi model}
+		\input{BAB_TESIS/BAB5/5_5_EVALUASI_MODEL}
+
+	\section{Implementasi Sistem FHIR}
+	\label{implementasi sistem fhir}
+	\input{BAB_TESIS/BAB5/6_IMPLEMENTASI_FHIR}
+
+		\subsection{Pengambilan Data}
+		\label{implementasi pengambilan data}
+		\input{BAB_TESIS/BAB5/6_1_PENGAMBILAN_DATA}
+
+		\subsection{Pengolahan Data}
+		\label{implementasi pengolahan data}
+		\input{BAB_TESIS/BAB5/6_2_PENGOLAHAN_DATA}
+
+		\subsection{Pengiriman Data}
+		\label{implementasi pengiriman data}
+		\input{BAB_TESIS/BAB5/6_3_PENGIRIMAN_DATA}
+
+		\subsection{Penerimaan Data}
+		\label{implementasi penerimaan data}
+		\input{BAB_TESIS/BAB5/6_4_PENERIMAAN_DATA}
+
+		\subsection{Pengiriman Respon}
+		\label{implementasi pengiriman respon}
+		\input{BAB_TESIS/BAB5/6_5_PENGIRIMAN_RESPON}
+
 
 %-----------------------------------------------------------------
 % Akhir BAB 5
@@ -282,17 +389,21 @@
 %-----------------------------------------------------------------
 % Awal BAB 6
 %-----------------------------------------------------------------
-\chapter{PENGUJIAN DAN PEMBAHASAN SISTEM}
-\label{PENGUJIAN DAN PEMBAHASAN SISTEM}
-\input{BAB_TESIS/BAB6/1_PENDAHULUAN}
+\chapter{HASIL DAN PEMBAHASAN}
+\label{hasil dan pembahasan}
 
-	\section{Pengujian Sistem Pengenalan Entitas Bernama}
-	\label{pengujian sistem ner}
-	\input{BAB_TESIS/BAB6/2_PENGUJIAN_SISTEM_NER}
+	\section{Hasil Pengujian}
+	\label{hasil pengujian}
+	\input{BAB_TESIS/BAB6/1_HASIL_PENGUJIAN}
 
-	\section{Pengujian Sistem Ekstraksi Kalimat Pernyataan}
-	\label{pengujian sistem ekstraksi kalimat pernyataan}
-	\input{BAB_TESIS/BAB6/3_PENGUJIAN_SISTEM_EKSTRAKSI_KALIMAT_PERNYATAAN}
+	\section{Analisis Hasil Pengujian}
+	\label{analisis hasil pengujian}
+	\input{BAB_TESIS/BAB6/2_ANALISIS_HASIL_PENGUJIAN}
+
+	\section{Pembahasan Hasil Pengujian}
+	\label{pembahasan hasil pengujian}
+	\input{BAB_TESIS/BAB6/3_PEMBAHASAN_HASIL_PENGUJIAN}
+
 
 %-----------------------------------------------------------------
 % Akhir BAB 6
@@ -302,8 +413,8 @@
 %-----------------------------------------------------------------
 % Awal BAB 7
 %-----------------------------------------------------------------
-\chapter{PENUTUP}
-\label{PENUTUP}
+\chapter{KESIMPULAN DAN SARAN}
+\label{kesimpulan dan saran}
 
 	\section{Kesimpulan}
 	\label{penutup kesimpulan}

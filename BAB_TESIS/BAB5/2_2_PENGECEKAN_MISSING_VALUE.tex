@@ -1,0 +1,34 @@
+Menggunakan kode berikut untuk mengecek apakah ada nilai yang hilang pada setiap kolom.
+\begin{lstlisting}
+    features.isnull().sum()
+    \end{lstlisting}
+
+hasilnya adalah sebagai berikut:
+
+\begin{table}[H]
+    \caption{Missing Values in Each Feature}
+    \centering
+    \begin{tabular}{|l|l|}
+    \hline
+    \textbf{Feature} & \textbf{Missing Values} \\ \hline
+    Index & 0 \\ 
+    Login Timestamp & 0 \\ 
+    User ID & 0 \\ 
+    Round-Trip Time [ms] & 29993329 \\ 
+    IP Address & 0 \\ 
+    Country & 0 \\ 
+    Region & 47409 \\ 
+    City & 8590 \\ 
+    ASN & 0 \\ 
+    User Agent String & 0 \\ 
+    Browser Name and Version & 0 \\ 
+    OS Name and Version & 0 \\ 
+    Device Type & 1526 \\ 
+    Login Successful & 0 \\ 
+    Is Attack IP & 0 \\ 
+    Is Account Takeover & 0 \\ \hline
+    \end{tabular}
+    \label{tab:missing_values}
+    \end{table}
+
+Dari tabel, terlihat bahwa sebagian besar kolom tidak memiliki nilai yang hilang, namun ada juga yang memilikinya. Misalnya, kolom 'Waktu Pulang Pergi [ms]' memiliki 29993329 nilai yang hilang, kolom 'Wilayah' memiliki 47409 nilai yang hilang, kolom 'Kota' memiliki 8590 nilai yang hilang, dan kolom 'Jenis Perangkat' memiliki 1526 nilai yang hilang.

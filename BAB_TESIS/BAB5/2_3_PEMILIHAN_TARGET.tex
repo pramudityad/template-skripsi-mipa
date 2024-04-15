@@ -1,0 +1,44 @@
+Pada tahap ini dilakukan pemilihan target yang akan diprediksi. Sebagaimana Random Forest merupakan algoritma klasifikasi, maka penelitian ini memerlukan fitur apa yang menjadi target.
+
+Melakukkan sampling terhadap tiga kolom yang dapat menjadi target, yaitu 'Login Successful', 'Is Attack IP', dan 'Is Account Takeover'. Berikut adalah kode untuk sampling data.
+
+\begin{lstlisting}
+    # calculate the percentage of True and False values in bolean char'
+    value_counts_1 = df['is_login_success'].value_counts(normalize=True)
+    is_login_success_true = value_counts_1[True] * 100
+    is_login_success_false = value_counts_1[False] * 100
+    print("is_login_success")
+    print(f"Percentage of True values: {is_login_success_true:.2f}%")
+    print(f"Percentage of False values: {is_login_success_false:.2f}%")
+
+    value_counts_2 = df['is_attack_ip'].value_counts(normalize=True)
+    is_attack_ip_true  = value_counts_2[True] * 100
+    is_attack_ip_false = value_counts_2[False] * 100
+    print("is_attack_ip")
+    print(f"Percentage of True values: {is_attack_ip_true:.2f}%")
+    print(f"Percentage of False values: {is_attack_ip_false:.2f}%")
+
+    value_counts_3 = df['is_account_takeover'].value_counts(normalize=True)
+    is_account_takeover_true  = value_counts_3[True] * 100
+    is_account_takeover_false = value_counts_3[False] * 100
+    print("is_account_takeover")
+    print(f"Percentage of True values: {is_account_takeover_true:.2f}%")
+    print(f"Percentage of False values: {is_account_takeover_false:.2f}%")
+\end{lstlisting}
+
+    Berikut adalah hasil sampling data.
+
+    \begin{table}[H]
+        \caption{Hasil Sampling Data}
+        \centering
+        \begin{tabular}{|l|l|l|}
+        \hline
+        \textbf{Target} & \textbf{True} & \textbf{False} \\ \hline
+        Login Successful & 67,35\% & 32,65\% \\ \hline
+        Is Attack IP & 3,09\% & 96,91\% \\ \hline
+        Is Account Takeover & 0,01\% & 99,99\% \\ \hline
+        \end{tabular}
+        \label{tab:sampling_data}
+        \end{table}
+
+        Dari hasil sampling data di atas, terlihat bahwa kolom 'Login Successful' memiliki persentase True yang lebih besar dibandingkan dengan False, sehingga kolom ini dipilih sebagai target.

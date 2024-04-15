@@ -1,0 +1,21 @@
+Hal ini dilakukan untuk membatasi jumlah dataset dan device type yang bertujuan mengurangi waktu komputasi dalam pembuatan model. Berikut adalah contoh kode untuk melakukan penyaringan user agent dan device type. 
+
+\begin{lstlisting}
+    # check lenght in column user_agent_string
+    features['length'] = features['user_agent_string'].apply(
+        lambda row: min(len(row), len(row)) if isinstance(row, str) else None
+    )
+    print(features['length'].mean())
+    \end{lstlisting}
+
+    Kode di atas digunakan untuk mengetahui panjang rata-rata string pada kolom 'User Agent String'. Hasilnya adalah 136.652141700553. 
+    Setelah itu dilakukan penyaringan data dengan cara menghapus data yang memiliki panjang string lebih dari 136. Berikut adalah contoh kode untuk melakukan penyaringan data.
+
+\begin{lstlisting}
+    # only keep rows with device type desktop
+    features = features[features.device_type == 'desktop']
+    # filter the DataFrame based on the length of column 'user_agent_string'
+    features = features[features['user_agent_string'].str.len() < 136]
+    \end{lstlisting}
+
+    Setelah itu dilakukan penyaringan data dengan cara menghapus data yang memiliki device type selain 'desktop'.

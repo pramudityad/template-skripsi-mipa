@@ -1,0 +1,33 @@
+Pada tahap ini dilakukan evaluasi model. Berikut adalah contoh kode untuk melakukan evaluasi model.
+\begin{lstlisting}
+    # Make predictions on the test set
+    y_pred = clf.predict(X_test)
+    
+    # Evaluate the accuracy of the model
+    accuracy = accuracy_score(y_test, y_pred)
+    print('Accuracy:', accuracy)
+    
+    # Calculate precision, recall, and F1 score
+    precision = precision_score(y_test, y_pred)
+    recall = recall_score(y_test, y_pred)
+    f1 = f1_score(y_test, y_pred)
+    
+    print('Precision:', precision)
+    print('Recall:', recall)
+    print('F1 Score:', f1)
+\end{lstlisting}
+
+Kode di atas digunakan untuk melakukan evaluasi model. Berikut adalah penjelasannya:
+Tahap ini mengevaluasi kinerja model machine learning menggunakan beberapa metrik: akurasi, presisi, recall, dan skor F1. Berikut adalah penjelasannya:
+
+\begin{enumerate}
+\item \textbf{Evaluasi Akurasi:} Beberapa baris pertama menghitung akurasi prediksi model. Akurasi adalah proporsi prediksi yang benar dari semua prediksi. Ini adalah metrik umum untuk masalah klasifikasi. Fungsi \texttt{accuracy\_score} dari \texttt{sklearn.metrics} digunakan untuk menghitung akurasi. Hasilnya dicetak ke konsol.
+\item \textbf{Menghitung Presisi, Recall, dan Skor F1:} Sisa kode menghitung presisi, recall, dan skor F1 dari prediksi model. Ini adalah metrik umum lainnya untuk masalah klasifikasi.
+   \begin{itemize}
+   \item Presisi adalah proporsi prediksi positif benar dari semua prediksi positif. Ini adalah ukuran berapa banyak prediksi positif yang sebenarnya benar.
+   \item Recall (juga dikenal sebagai sensitivitas) adalah proporsi prediksi positif benar dari semua positif aktual. Ini adalah ukuran berapa banyak instansi positif aktual yang dapat diidentifikasi model.
+   \item Skor F1 adalah rata-rata harmonik dari presisi dan recall. Ini memberikan skor tunggal yang menyeimbangkan kedua kekhawatiran presisi dan recall dalam satu angka.
+   \end{itemize}
+\end{enumerate}
+
+Metrik ini dihitung menggunakan fungsi \texttt{precision\_score}, \texttt{recall\_score}, dan \texttt{f1\_score} dari \texttt{sklearn.metrics}, masing-masing. Hasilnya kemudian dicetak ke konsol.

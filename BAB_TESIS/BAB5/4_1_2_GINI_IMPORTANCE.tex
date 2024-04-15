@@ -1,0 +1,43 @@
+Setelah dilakukan encoding, maka seluruh kolom memiliki tipe data numerik. Berikut adalah contoh kode untuk melakukan pemilihan fitur menggunakan Gini Importance.
+
+\begin{lstlisting}
+    ### Gini importance 
+    # create the classifier with n_estimators = default
+    clf = RandomForestClassifier(random_state=0)
+
+    # fit the model to the training set
+    clf.fit(X_train, y_train)
+
+    # view the feature scores
+    feature_scores = pd.Series(clf.feature_importances_, index=X_train.columns).sort_values(ascending=False)
+    
+    # Top 10 important features
+    feature_scores.head(10) 
+    \end{lstlisting}
+
+    Pada kode di atas dilakukan pemilihan 10 fitur teratas. Dikarenakan jumlah fitur yang banyak, setelah dilakukkan encoding maka akan sulit untuk memvisualisasikan seluruh fitur.
+    Berikut adalah hasil keluaran dari tahap ini.
+
+    \begin{table}[H]
+    \caption{Gini Importance of Each Feature}
+
+    \centering
+    \begin{tabular}{|l|l|}
+    \hline
+    \textbf{Feature} & \textbf{Gini Importance} \\ \hline
+    asn & 0.017551 \\ 
+    country\_2 & 0.009943 \\ 
+    country\_4 & 0.004708 \\ 
+    country\_6 & 0.003670 \\ 
+    ip\_address\_23 & 0.003618 \\ 
+    os\_detail\_1 & 0.003317 \\ 
+    browser\_1 & 0.002975 \\ 
+    os\_detail\_16 & 0.002832 \\ 
+    user\_agent\_string\_49 & 0.002508 \\ 
+    browser\_2 & 0.002213 \\ \hline
+    \end{tabular}
+    \label{tab:gini_importance}
+    \end{table}
+
+    Dalam tabel \ref{tab:gini_importance}, jika di lakukkan pengelompokkan maka akan terlihat bahwa fitur 'asn', 'country', 'ip\_address', 'os\_detail', 'browser', dan 'user\_agent\_string' memiliki nilai Gini Importance yang tinggi. 
+    Namun, hanya 4 group teratas yang memiliki nilai Gini Importance yang tinggi, yaitu 'asn', 'country', 'ip\_address', dan 'os\_detail' yang akan digunakan sebagai fitur dalam pembuatan model.

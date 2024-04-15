@@ -1,0 +1,23 @@
+Dalam penelitian ini data yang digunakan adalah data fitur login dari lebih dari 33 juta upaya login dan lebih dari 3,3 juta pengguna pada layanan online berskala besar di Norwegia. Data asli dikumpulkan antara Februari 2020 dan Februari 2021 dari Kaggle. Data ini berisi 284807 baris data dengan 31 kolom. Kolom-kolom tersebut adalah sebagai berikut:
+
+\begin{longtable}{|p{0.2\textwidth}|p{0.15\textwidth}|p{0.3\textwidth}|p{0.2\textwidth}|}
+    \hline
+    \textbf{Feature} & \textbf{Data Type} & \textbf{Description} & \textbf{Range or Example} \\ \hline
+    IP Address & String & IP address belonging to the login attempt & 0.0.0.0 - 255.255.255.255 \\ \hline
+    Country & String & Country derived from the IP address & US \\ \hline
+    Region & String & Region derived from the IP address & New York \\ \hline
+    City & String & City derived from the IP address & Rochester \\ \hline
+    ASN & Integer & Autonomous system number derived from the IP address & 0 - 600000 \\ \hline
+    User Agent String & String & User agent string submitted by the client & Mozilla/5.0 (Windows NT 10.0; Win64; ... \\ \hline
+    OS Name and Version & String & Operating system name and version derived from the user agent string & Windows 10 \\ \hline
+    Browser Name and Version & String & Browser name and version derived from the user agent string & Chrome 70.0.3538 \\ \hline
+    Device Type & String & Device type derived from the user agent string & (`mobile`, `desktop`, `tablet`, `bot`, `unknown`) \\ \hline
+    User ID & Integer & Identification number related to the affected user account & Random pseudonym \\ \hline
+    Login Timestamp & Integer & Timestamp related to the login attempt & 64 Bit timestamp \\ \hline
+    Round-Trip Time (RTT) [ms] & Integer & Server-side measured latency between client and server & 1 - 8600000 \\ \hline
+    Login Successful & Boolean & `True`: Login was successful, `False`: Login failed & (`true`, `false`) \\ \hline
+    Is Attack IP & Boolean & IP address was found in known attacker data set & (`true`, `false`) \\ \hline
+    Is Account Takeover & Boolean & Login attempt was identified as account takeover by incident response team of the online service & (`true`, `false`) \\ \hline
+    \caption{Deskripsi tabel fitur login}
+    \label{tab:my_label}
+\end{longtable}

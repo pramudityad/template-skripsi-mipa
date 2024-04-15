@@ -1,0 +1,30 @@
+Pada tahap ini dilakukan penghapusan kolom yang tidak diperlukan. Kolom yang dihapus adalah kolom 'Round-Trip Time [ms]', 'Index', 'Is Attack IP', 'Is Account Takeover', 'User ID', 'Token', 'Device Type', dan 'Length'. Berikut adalah contoh kode untuk menghapus kolom yang tidak diperlukan.
+
+\begin{lstlisting}
+    # drop unsued columns
+    features = features.drop(['round_trip', 'index', 'is_attack_ip', 'is_account_takeover', 'user_id', 'token', 'device_type', 'length'], axis=1, inplace=True)
+    \end{lstlisting}
+
+Hasil keluaran dari tahap ini adalah sebagai berikut. 
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|l|l|}
+    \hline
+    \textbf{Column Name} & \textbf{Data Type} & \textbf{\#Distinct} & \textbf{NA Values} \\ \hline
+    login\_timestamp & object & 30000 & 0 \\ 
+    ip\_address & object & 17387 & 0 \\ 
+    country & object & 75 & 0 \\ 
+    region & object & 273 & 14 \\ 
+    city & object & 1414 & 7 \\ 
+    asn & int64 & 792 & 0 \\ 
+    user\_agent\_string & object & 637 & 0 \\ 
+    browser & object & 167 & 0 \\ 
+    os\_detail & object & 61 & 0 \\ 
+    is\_login\_success & bool & 2 & 0 \\ \hline
+    \end{tabular}
+    \caption{Revised Initial Exploratory Data Analysis}
+    \label{tab:revised_initial_eda}
+    \end{table}
+
+    Berdasarkan tabel \ref{tab:revised_initial_eda}, diperoleh 30000 data, dengan 10 kolom, dan ada 14 data yang memiliki nilai kosong pada kolom 'Region' dan 7 data yang memiliki nilai kosong pada kolom 'City'.

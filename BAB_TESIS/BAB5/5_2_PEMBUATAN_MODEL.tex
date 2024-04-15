@@ -1,0 +1,18 @@
+Pada tahap ini dilakukan pembuatan model. Berikut adalah contoh kode untuk melakukan pembuatan model.
+\begin{lstlisting}
+    # Create the classifier with n_estimators = 0
+    clf = RandomForestClassifier(random_state=0)
+
+    # Fit the model to the data
+    clf.fit(X_train, y_train)
+\end{lstlisting}
+    
+Kode Python yang dipilih ini menginisialisasi dan melatih klasifikasi Random Forest. Berikut adalah penjelasannya:
+
+\begin{enumerate}
+\item \textbf{Menginisialisasi klasifikasi Random Forest:} Baris 
+2 membuat instance baru dari klasifikasi Random Forest. Parameter \texttt{random\_state} diatur ke 0 untuk reproduktibilitas. Ini berarti bahwa pemisahan yang dihasilkan dapat direproduksi, yang penting untuk hasil yang konsisten di berbagai penjalanan.
+\item \textbf{Melatih klasifikasi Random Forest:} Baris ke 5 melatih klasifikasi Random Forest pada data latihan. Metode \texttt{fit} menerima dua argumen: fitur (\texttt{X\_train}) dan target (\texttt{y\_train}). Fitur adalah input untuk model, dan target adalah apa yang ingin kita prediksi dari model.
+\end{enumerate}
+
+Kelas \texttt{RandomForestClassifier} memiliki banyak parameter yang dapat disesuaikan untuk mengoptimalkan kinerja model. Dalam kasus ini, hanya parameter \texttt{random\_state} yang diatur, dan semua parameter lain dibiarkan sebagai nilai default.
