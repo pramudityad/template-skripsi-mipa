@@ -1,0 +1,9 @@
+# Fdb version 4
+["latex"] 0 "CONFIG.tex" "CONFIG.dvi" "CONFIG" 0 -1
+  "CONFIG.aux" 0 -1 0 "latex"
+  "CONFIG.tex" 0 -1 0 ""
+  (generated)
+  "CONFIG.aux"
+  "CONFIG.dvi"
+  "CONFIG.log"
+  (rewritten before read)

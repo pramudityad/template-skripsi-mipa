@@ -1,0 +1,6 @@
+PWD /run/media/pramudityad/sda1/Tesis/template-skripsi-mipa
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/latex.fmt
+INPUT CONFIG.tex
+OUTPUT CONFIG.log
