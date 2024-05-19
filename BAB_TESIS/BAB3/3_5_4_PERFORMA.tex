@@ -1,11 +1,12 @@
 Ada beberapa cara untuk mengukur kinerja pengklasifikasi, tetapi yang paling umum adalah menggunakan matriks kebingungan, presisi, recall, dan skor F1.
 
-\textit{Confusion matrix}
-
-Atau dikenal juga dengan matriks kebingungan adalah cara untuk mengekspresikan berapa banyak prediksi pengklasifikasi yang benar, dan ketika salah, di mana pengklasifikasi mengalami kebingungan (sesuai dengan namanya). Pada matriks kebingungan di bawah ini, baris mewakili label yang benar dan kolom mewakili label yang diprediksi. Nilai pada diagonal mewakili jumlah (atau persen, dalam matriks kebingungan yang dinormalisasi) dari waktu di mana label yang diprediksi cocok dengan label yang sebenarnya. Nilai di sel lainnya mewakili contoh di mana pengklasifikasi salah memberi label pada pengamatan; kolom memberi tahu kita apa yang diprediksi oleh pengklasifikasi, dan baris memberi tahu kita apa label yang benar.
+\textit{Confusion matrix} atau dikenal juga dengan matriks kebingungan adalah cara untuk mengekspresikan berapa banyak prediksi pengklasifikasi yang benar, dan ketika salah, di mana pengklasifikasi mengalami kebingungan (sesuai dengan namanya). 
+Pada matriks kebingungan di bawah ini, baris mewakili label yang benar dan kolom mewakili label yang diprediksi. Nilai pada diagonal mewakili jumlah (atau persen, dalam matriks kebingungan yang dinormalisasi) dari waktu di mana label yang diprediksi cocok dengan label yang sebenarnya. 
+Nilai di sel lainnya mewakili contoh di mana pengklasifikasi salah memberi label pada pengamatan; kolom memberi tahu kita apa yang diprediksi oleh pengklasifikasi, dan baris memberi tahu kita apa label yang benar.
 
 Presisi adalah jumlah anggota kelas yang diidentifikasi dengan benar dibagi dengan semua kali model memprediksi kelas tersebut. Dalam kasus Aspens, skor presisi adalah jumlah Aspens yang diidentifikasi dengan benar dibagi dengan jumlah total kali pengklasifikasi memprediksi Aspen, baik benar maupun salah.
 
 Recall adalah jumlah anggota kelas yang diidentifikasi dengan benar oleh pengklasifikasi dibagi dengan jumlah total anggota dalam kelas tersebut. Untuk Aspen, ini adalah jumlah Aspen aktual yang diidentifikasi dengan benar oleh pengklasifikasi.
 
-Skor F1 sedikit kurang intuitif karena menggabungkan presisi dan recall ke dalam satu metrik. Jika presisi dan recall keduanya tinggi, F1 juga akan tinggi. Jika keduanya rendah, F1 akan rendah. Jika salah satunya tinggi dan yang lainnya rendah, F1 akan rendah. F1 adalah cara cepat untuk mengetahui apakah pengklasifikasi benar-benar baik dalam mengidentifikasi anggota kelas, atau apakah pengklasifikasi menemukan jalan pintas (misalnya, hanya mengidentifikasi segala sesuatu sebagai anggota kelas yang besar).
+Skor F1 sedikit kurang intuitif karena menggabungkan presisi dan recall ke dalam satu metrik. Jika presisi dan recall keduanya tinggi, F1 juga akan tinggi. 
+Jika keduanya rendah, F1 akan rendah. Jika salah satunya tinggi dan yang lainnya rendah, F1 akan rendah. F1 adalah cara cepat untuk mengetahui apakah pengklasifikasi benar-benar baik dalam mengidentifikasi anggota kelas, atau apakah pengklasifikasi menemukan jalan pintas (misalnya, hanya mengidentifikasi segala sesuatu sebagai anggota kelas yang besar).

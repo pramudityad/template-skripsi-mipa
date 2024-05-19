@@ -1,3 +1,19 @@
 One-hot encoding adalah teknik pengkodean kategoris yang umum digunakan dalam pemrosesan data. Teknik ini cocok untuk variabel kategori di mana kategori tidak memiliki urutan atau hubungan yang melekat dengan nilai numeriknya. Ide di balik pengkodean one-hot adalah untuk mewakili setiap kategori sebagai vektor biner yang panjangnya sama dengan jumlah kategori unik dalam variabel tersebut.
 
-Cara kerja one-hot encoding adalah dengan membuat kolom biner baru untuk setiap kategori dalam kolom kategori. Jika terdapat N kategori unik, maka akan dibuat N kolom biner baru. Setiap kolom biner akan memiliki nilai 1 jika kategori tersebut hadir dalam observasi, dan nilai 0 jika tidak hadir. Dengan demikian, setiap observasi direpresentasikan sebagai vektor biner dengan panjang N, di mana setiap elemen vektor menunjukkan keberadaan atau ketiadaan kategori yang sesuai dalam observasi. Teknik ini memungkinkan model machine learning untuk memahami dan memproses variabel kategori dalam bentuk yang sesuai dengan algoritma yang digunakan, seperti algoritma regresi logistik atau jaringan saraf.
+\begin{table}[htbp]
+    \caption{Sample Encoding Data}
+    \centering
+    \resizebox{\textwidth}{!}{%
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+    \hline
+    login\_timestamp\_1 & login\_timestamp\_2 & ip\_address\_1 & ip\_address\_2 & country\_1 & country\_2 & region\_1 & region\_2 & city\_1 \\ \hline
+    0 & 1 & 0 & 1 & 0 & 1 & 0 & 1 & 0 \\ \hline
+    1 & 0 & 1 & 0 & 1 & 0 & 1 & 0 & 1 \\ \hline
+    \end{tabular}%
+    }
+    \label{tab:sample_table}
+\end{table}
+
+
+Cara kerja one-hot encoding adalah seperti ditunjukan pada Tabel \ref{tab:sample_table} dengan membuat kolom biner baru untuk setiap kategori dalam kolom kategori. Jika terdapat N kategori unik, maka akan dibuat N kolom biner baru. 
+Setiap kolom biner akan memiliki nilai 1 jika kategori tersebut hadir dalam observasi, dan nilai 0 jika tidak hadir. Dengan demikian, setiap observasi direpresentasikan sebagai vektor biner dengan panjang N, di mana setiap elemen vektor menunjukkan keberadaan atau ketiadaan kategori yang sesuai dalam observasi. Teknik ini memungkinkan model machine learning untuk memahami dan memproses variabel kategori dalam bentuk yang sesuai dengan algoritma yang digunakan, seperti algoritma regresi logistik atau jaringan saraf.
