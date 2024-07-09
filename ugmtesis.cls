@@ -299,11 +299,11 @@
   \begin{singlespace}
   \phantomsection
   \addcontentsline{toc}{chapter}{Halaman Pengesahan}
-  \MakeUppercase{\normalfont\large\bfseries\expandafter{Halaman Pengesahan}}\\
+  \MakeUppercase{\normalfont\large\expandafter{Halaman Pengesahan}}\\
   \vspace{1.0cm}
-  \MakeUppercase{\normalfont\large\bfseries\expandafter{Tesis}}\\
+  \MakeUppercase{\normalfont\large\expandafter{Tesis}}\\
   \vspace{0.5cm}
-      \MakeUppercase{\normalfont\bfseries\@titleind}\par\nobreak
+      \MakeUppercase{\normalfont\@titleind}\par\nobreak
   \vspace{1.0cm}
 Telah dipersiapkan dan disusun oleh\\
 \vspace{0.5cm}
@@ -334,7 +334,7 @@ Ko-promotor&Penguji
 
 \vspace{0.5cm}
 Tesis ini telah diterima sebagai salah satu persyaratan\\
-Untuk memperoleh gelar Master of Science Fisika\\
+Untuk memperoleh gelar Master of Computer Science\\
 Tanggal \expandafter{\@examdate}\\
 \vspace{1.5cm}
 \@headprogram\\
